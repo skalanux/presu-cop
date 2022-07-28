@@ -260,10 +260,10 @@ def in_game():
 
         hud_group.draw(window)
 
-        score_text = font.render(f"Score: {score}", True, color.LIGHT_GREY)
+        score_text = font.render(f"Puntos: {score}", True, color.LIGHT_GREY)
         window.blit(score_text, (c.DISPLAY_LEFT + 98, c.DISPLAY_TOP + 33))
 
-        lives_text = font.render(f"Lives: {player.lives}", True, color.LIGHT_GREY)
+        lives_text = font.render(f"Vidas: {player.lives}", True, color.LIGHT_GREY)
         window.blit(lives_text, (c.DISPLAY_RIGHT - 255, c.DISPLAY_TOP + 33))
 
         if paused:
