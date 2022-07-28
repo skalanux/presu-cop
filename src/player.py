@@ -115,7 +115,7 @@ class Player(GameCharacter):
         else:
             self.speed_y = 0
 
-        if self.keystate[pygame.K_z] and self.ready:
+        if self.keystate[pygame.K_SPACE] and self.ready:
             self.shoot_projectile()
             self.ready = False
             self.projectile_time = pygame.time.get_ticks()

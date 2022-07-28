@@ -64,11 +64,11 @@ def title_screen():
         press_start_position = (c.DISPLAY_WIDTH_CENTER, c.DISPLAY_HEIGHT_CENTER + 50)
         press_start_rect = press_start.get_rect(center=press_start_position)
 
-        controlls = font.render("Mové con las flechitas y dispará con la tecla 'Z'.", True, color.LIGHT_GREY)
+        controlls = font.render("Mové con las flechitas y dispará con la tecla .", True, color.LIGHT_GREY)
         controlls_position = (c.DISPLAY_WIDTH_CENTER, c.DISPLAY_HEIGHT_CENTER + 120)
         controlls_rect = controlls.get_rect(center=controlls_position)
 
-        window.fill(color.BLACK)
+        window.fill(color.DEVECOOP_FUSCIA)
 
         window.blit(title_text, title_text_rect)
         window.blit(press_start, press_start_rect)
@@ -101,7 +101,7 @@ def game_over():
         game_over_text = font.render(f"Game Over", True, color.LIGHT_GREY)
         game_over_text_position = c.DISPLAY_CENTER
         game_over_text_rect = game_over_text.get_rect(center=game_over_text_position)
-        press_start = font.render("Apretá ENTER para jugar de nuevo o ESC pra salir.", True, color.LIGHT_GREY)
+        press_start = font.render("Apretá ENTER para jugar de nuevo o ESC para salir.", True, color.LIGHT_GREY)
         press_start_position = (c.DISPLAY_WIDTH_CENTER, c.DISPLAY_HEIGHT_CENTER + 50)
         press_start_rect = press_start.get_rect(center=press_start_position)
 
