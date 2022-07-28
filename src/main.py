@@ -152,7 +152,7 @@ def in_game():
         # Setting the framerate.
         clock.tick(c.FPS)
 
-        window.fill(color.WHITE)
+        window.fill(color.GREY)
 
         for event in pygame.event.get():
 
