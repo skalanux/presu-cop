@@ -17,7 +17,7 @@ pygame.mixer.pre_init(44100, -16, 2, 512)
 
 # Game window
 window = pygame.display.set_mode(c.DISPLAY_SIZE)
-pygame.display.set_caption("Generic Space Shooter V3")
+pygame.display.set_caption("Presu-cop")
 pygame.display.set_icon(c.ICON)
 
 # Classes.
@@ -56,15 +56,15 @@ def title_screen():
         # Setting the framerate.
         clock.tick(c.FPS)
         keystate = pygame.key.get_pressed()
-        title_text = font.render("Generic Space Shooter V3", True, color.LIGHT_GREY)
+        title_text = font.render("Presu-cop - Policia de presupuestos", True, color.LIGHT_GREY)
         title_text_position = (c.DISPLAY_CENTER)
         title_text_rect = title_text.get_rect(center=title_text_position)
 
-        press_start = font.render("Press ENTER to start or ESC to quit.", True, color.LIGHT_GREY)
+        press_start = font.render("Presioná ENTER para empezar o ESC para salir.", True, color.LIGHT_GREY)
         press_start_position = (c.DISPLAY_WIDTH_CENTER, c.DISPLAY_HEIGHT_CENTER + 50)
         press_start_rect = press_start.get_rect(center=press_start_position)
 
-        controlls = font.render("Move with arrow keys and shoot lasers with 'Z' key.", True, color.LIGHT_GREY)
+        controlls = font.render("Mové con las flechitas y dispará con la tecla 'Z'.", True, color.LIGHT_GREY)
         controlls_position = (c.DISPLAY_WIDTH_CENTER, c.DISPLAY_HEIGHT_CENTER + 120)
         controlls_rect = controlls.get_rect(center=controlls_position)
 
@@ -101,7 +101,7 @@ def game_over():
         game_over_text = font.render(f"Game Over", True, color.LIGHT_GREY)
         game_over_text_position = c.DISPLAY_CENTER
         game_over_text_rect = game_over_text.get_rect(center=game_over_text_position)
-        press_start = font.render("Press ENTER to play again or ESC to quit.", True, color.LIGHT_GREY)
+        press_start = font.render("Apretá ENTER para jugar de nuevo o ESC pra salir.", True, color.LIGHT_GREY)
         press_start_position = (c.DISPLAY_WIDTH_CENTER, c.DISPLAY_HEIGHT_CENTER + 50)
         press_start_rect = press_start.get_rect(center=press_start_position)
 
@@ -144,7 +144,7 @@ def in_game():
     global score, player_death_timer
     running = True
     paused = False
-    pause_text = font.render(f"Paused", True, color.LIGHT_GREY)
+    pause_text = font.render(f"Pausa", True, color.LIGHT_GREY)
     pause_text_position = c.DISPLAY_CENTER
     pause_text_rect = pause_text.get_rect(center=pause_text_position)
 
@@ -152,7 +152,7 @@ def in_game():
         # Setting the framerate.
         clock.tick(c.FPS)
 
-        window.fill(color.BLACK)
+        window.fill(color.WHITE)
 
         for event in pygame.event.get():
 
